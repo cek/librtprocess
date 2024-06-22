@@ -6,8 +6,8 @@ if (UNIX OR WIN32)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
     set(CMAKE_CXX_EXTENSIONS OFF)
 
-    add_cxx_compiler_flag("-Wall" SUPPORTED_CXX_COMPILER_FLAGS)
-    add_cxx_compiler_flag("-Wextra" SUPPORTED_CXX_COMPILER_FLAGS)
+    #add_cxx_compiler_flag("-Wall" SUPPORTED_CXX_COMPILER_FLAGS)
+    #add_cxx_compiler_flag("-Wextra" SUPPORTED_CXX_COMPILER_FLAGS)
     add_cxx_compiler_flag("-Wshadow" SUPPORTED_CXX_COMPILER_FLAGS)
     add_cxx_compiler_flag("-Wwrite-strings" SUPPORTED_CXX_COMPILER_FLAGS)
     add_cxx_compiler_flag("-Werror=write-strings" SUPPORTED_CXX_COMPILER_FLAGS)
@@ -26,6 +26,7 @@ if (UNIX OR WIN32)
     if(OPTION_OMP)
         add_cxx_compiler_flag("-Werror=unknown-pragmas" SUPPORTED_CXX_COMPILER_FLAGS)
     endif()
+    add_compile_options(/wd4305 /wd4244 /wd4365)
 
 endif()
 
