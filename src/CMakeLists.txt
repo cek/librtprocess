@@ -20,6 +20,7 @@ set(rtprocess_SRCS
     preprocess/CA_correct.cc
     postprocess/hilite_recon.cc)
 
+message("SHARED LIBS IS: ${BUILD_SHARED_LIBS}")
 add_library(rtprocess ${rtprocess_SRCS})
 target_include_directories(rtprocess
                            PUBLIC

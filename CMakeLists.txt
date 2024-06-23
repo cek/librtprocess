@@ -3,11 +3,11 @@ cmake_minimum_required(VERSION 3.5.0)
 cmake_policy(SET CMP0048 NEW)
 
 if (NOT DEFINED CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE "RelWithDebInfo")
+    set(CMAKE_BUILD_TYPE "Release")
 endif()
 
 if (WIN32)
-    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 endif()
 
 # Specify search path for CMake modules to be loaded by include()
